@@ -100,19 +100,55 @@ main {
 }
 
 .content {
-  padding: 1.5rem;
-}
-
-/* .content,
-.sign-up-form {
-  padding: 0 1.5rem;
-} */
-
-.hero-list {
   padding: 2rem;
 }
 
-li {
-  list-style-image: url("/assets/images/icon-list.svg");
-  padding-left: 1rem;
+p {
+  margin: 1.5rem 0;
 }
+
+ul {
+  list-style-type: none;
+}
+
+ul li {
+  padding-left: 2.5rem;
+  background-image: url(/assets/images/icon-list.svg);
+  background-position: 0 0;
+  background-color: 1.6rem 1.6rem;
+  background-repeat: no-repeat;
+  margin: 1rem 0;
+}
+
+.sign-up-form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 0 2rem;
+}
+
+input[type="email"] {
+  padding: 20px;
+  width: 100%;
+  border-radius: 0.5rem;
+  border: 1px solid var(--grey);
+  margin-top: 0.5rem;
+}
+
+input[type="submit"] {
+  background-color: var(--blue-800);
+  color: var(--white);
+  font-family: Roboto-Bold, sans-serif;
+  font-size: 1rem;
+  line-height: 1.5;
+  letter-spacing: 0;
+  padding: 20px;
+  text-decoration: none;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  width: 100%;
+  margin-top: 1.5rem;
+}
+
+
