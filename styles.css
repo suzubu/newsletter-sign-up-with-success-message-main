@@ -46,7 +46,7 @@ html {
 
 .text-1 {
   font-family: Roboto-Bold, sans-serif;
-  font-size: clamp(2.5rem, 2.071rem + 3vi, 3.5rem);
+  font-size: clamp(2.5rem, 1rem + 3vi, 3.5rem);
   line-height: 1;
   letter-spacing: 0;
   color: var(--blue-800);
@@ -82,4 +82,24 @@ main {
   width: 100%;
   display: flex;
   justify-content: center;
+}
+
+.card {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 26.875rem;
+  min-width: 18.75rem;
+  margin: 0 auto;
+}
+
+.hero-image {
+  display: block;
+  width: 100%;
+}
+
+.content,
+.sign-up-form {
+  padding: 0 1.5rem;
 }
