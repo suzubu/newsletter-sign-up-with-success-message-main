@@ -99,7 +99,20 @@ main {
   width: 100%;
 }
 
-.content,
+.content {
+  padding: 1.5rem;
+}
+
+/* .content,
 .sign-up-form {
   padding: 0 1.5rem;
+} */
+
+.hero-list {
+  padding: 2rem;
+}
+
+li {
+  list-style-image: url("/assets/images/icon-list.svg");
+  padding-left: 1rem;
 }
