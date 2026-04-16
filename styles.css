@@ -10,14 +10,20 @@
 
 :root {
   /* Colours */
-  --red: #ff6257;
+  /* --red: #ff6257; */
+  --red: #d93025;
   --white: #ffffff;
   --grey: #949494;
-  --blue-700: #36384e;
   --blue-800: #242742;
+
+  /* Backgrounds */
+  --blue-700: #36384e;
 
   /* Gradient */
   --gradient-primary: linear-gradient(to right, #ff6a3a, #ff527b);
+
+  /* Shadow */
+  --shadow-card: 0px 15px 25px 5px rgba(0, 0, 0, 0.6);
 
   /* Spacing */
   --spacing-100: 0.5rem;
@@ -25,17 +31,26 @@
   --spacing-300: 1.5rem;
   --spacing-400: 2rem;
   --spacing-500: 2.5rem;
-  --spacing-600: 3rem;
-  --spacing-700: 3.5rem;
   --spacing-800: 4rem;
-  --spacing-900: 4.5rem;
-  --spacing-1300: 6.5rem;
+
+  /* Sizing */
+  --size-icon: 1.5rem;
+
+  /* Border Radius */
+  --radius-sm: 0.5rem;
+  --radius-md: 1rem;
 }
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+/* Focus styles */
+:focus-visible {
+  outline: 3px solid var(--red);
+  outline-offset: 3px;
 }
 
 html {
@@ -48,7 +63,6 @@ html {
   font-family: Roboto-Bold, sans-serif;
   font-size: clamp(2.5rem, 1rem + 3vi, 3.5rem);
   line-height: 1;
-  letter-spacing: 0;
   color: var(--blue-800);
 }
 
@@ -56,7 +70,6 @@ html {
   font-family: Roboto-Bold, sans-serif;
   font-size: 1rem;
   line-height: 1.5;
-  letter-spacing: 0;
   color: var(--white);
 }
 
@@ -64,7 +77,6 @@ html {
   font-family: Roboto, sans-serif;
   font-size: 1rem;
   line-height: 1.5;
-  letter-spacing: 0;
   color: var(--blue-800);
 }
 
@@ -72,7 +84,6 @@ html {
   font-family: Roboto-Bold, sans-serif;
   font-size: 0.75rem;
   line-height: 1.5;
-  letter-spacing: 0;
   color: var(--blue-800);
 }
 
@@ -95,7 +106,6 @@ main {
   flex-direction: column;
   align-items: center;
   max-width: 26.875rem;
-  min-width: 18.75rem;
   margin: 0 auto;
 }
 
@@ -105,11 +115,11 @@ main {
 }
 
 .content {
-  padding: 2rem;
+  padding: var(--spacing-400);
 }
 
 p {
-  margin: 1.5rem 0;
+  margin: var(--spacing-300) 0;
 }
 
 ul {
@@ -117,19 +127,19 @@ ul {
 }
 
 ul li {
-  padding-left: 2.5rem;
+  padding-left: var(--spacing-500);
   background-image: url(/assets/images/icon-list.svg);
   background-position: 0 0;
-  background-size: 1.5rem 1.5rem;
+  background-size: var(--size-icon) var(--size-icon);
   background-repeat: no-repeat;
-  margin: 1rem 0;
+  margin: var(--spacing-200) 0;
 }
 
 .sign-up-form {
   display: flex;
   flex-direction: column;
   width: 100%;
-  padding: 0 2rem;
+  padding: 0 var(--spacing-400);
 }
 
 .form-group {
@@ -145,11 +155,11 @@ ul li {
 }
 
 input[type="email"] {
-  padding: 1.25rem;
+  padding: var(--spacing-200);
   width: 100%;
-  border-radius: 0.5rem;
+  border-radius: var(--radius-sm);
   border: 1px solid var(--grey);
-  margin-top: 0.5rem;
+  margin-top: var(--spacing-100);
 }
 
 input[type="email"].invalid {
@@ -164,10 +174,10 @@ input[type="email"].invalid ~ .error-message {
 
 .btn {
   width: 100%;
-  margin: 1.5rem 0;
-  padding: 1.25rem;
+  margin: var(--spacing-200) 0;
+  padding: var(--spacing-200);
   border: none;
-  border-radius: 0.5rem;
+  border-radius: var(--radius-sm);
   cursor: pointer;
   position: relative;
   overflow: hidden;
@@ -201,27 +211,31 @@ input[type="email"].invalid ~ .error-message {
   }
 
   .card {
-    border-radius: 1rem;
+    border-radius: var(--radius-md);
     max-width: 37.5rem;
-    box-shadow: 0px 15px 25px 5px rgba(0, 0, 0, 0.6);
+    box-shadow: var(--shadow-card);
   }
 
   .hero-image {
-    padding: 2rem;
+    padding: var(--spacing-400);
     width: 100%;
   }
 
   .card-body {
-    padding: 0 2.5rem;
+    padding: 0 var(--spacing-500);
     width: 100%;
   }
 
   .content {
-    padding: 0 0 1rem 0;
+    padding: 0 0 var(--spacing-200) 0;
   }
 
   .sign-up-form {
     padding: 0;
+  }
+
+  .btn {
+    margin: var(--spacing-300) 0;
   }
 }
 
@@ -230,12 +244,12 @@ input[type="email"].invalid ~ .error-message {
   .card {
     flex-direction: row-reverse;
     align-items: center;
-    padding: 1rem;
-    gap: 1.5rem;
+    padding: var(--spacing-200);
+    gap: var(--spacing-300);
     max-width: 55rem;
     overflow: hidden;
     max-height: 100vh;
-    box-shadow: 0px 15px 25px 5px rgba(0, 0, 0, 0.6);
+    box-shadow: var(--shadow-card);
   }
 
   picture {
@@ -248,31 +262,31 @@ input[type="email"].invalid ~ .error-message {
     width: 100%;
     height: 100%;
     padding: 0;
-    border-radius: 1rem;
+    border-radius: var(--radius-md);
     object-fit: cover;
   }
 
   .card-body {
     flex: 1;
-    padding: 1rem;
+    padding: var(--spacing-200);
   }
 
   .content {
     margin: 0;
     padding: 0;
-    padding-top: 1rem;
+    padding-top: var(--spacing-200);
   }
 
   p {
-    margin: 0.5rem 0;
+    margin: var(--spacing-100) 0;
   }
 
   ul li {
-    margin: 0.5rem;
+    margin: var(--spacing-100);
   }
 
   .btn {
-    margin: 1rem 0;
+    margin: var(--spacing-200) 0;
   }
 }
 
@@ -282,9 +296,9 @@ input[type="email"].invalid ~ .error-message {
     flex-direction: row-reverse;
     align-items: center;
     max-width: 58rem;
-    padding: 1.5rem;
-    gap: 2rem;
-    box-shadow: 0px 15px 25px 5px rgba(0, 0, 0, 0.6);
+    padding: var(--spacing-300);
+    gap: var(--spacing-400);
+    box-shadow: var(--shadow-card);
   }
 
   picture {
@@ -295,16 +309,17 @@ input[type="email"].invalid ~ .error-message {
   .hero-image {
     width: 100%;
     padding: 0;
-    border-radius: 1rem;
+    border-radius: var(--radius-md);
   }
 
   .card-body {
     flex: 1;
-    padding: 1rem;
+    padding: var(--spacing-200);
   }
 }
 
 /* Success Message */
+
 .success-message {
   display: none;
   width: 100%;
@@ -312,7 +327,7 @@ input[type="email"].invalid ~ .error-message {
   background-color: var(--white);
   flex-direction: column;
   justify-content: space-between;
-  padding: 2rem;
+  padding: var(--spacing-400);
 }
 
 .success-message.is-visible {
@@ -322,17 +337,17 @@ input[type="email"].invalid ~ .error-message {
 .success-content {
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
-  margin-top: 4rem;
+  gap: var(--spacing-300);
+  margin-top: var(--spacing-800);
 }
 
 .success-icon {
-  width: 4rem;
-  height: 4rem;
+  width: var(--spacing-800);
+  height: var(--spacing-800);
 }
 
 .dismiss-btn {
-  margin-top: 1rem;
+  margin-top: var(--spacing-200);
 }
 
 @media (min-width: 26.875em) {
@@ -346,10 +361,10 @@ input[type="email"].invalid ~ .error-message {
 
   .success-content {
     background-color: var(--white);
-    border-radius: 1rem;
-    padding: 2.5rem;
+    border-radius: var(--radius-md);
+    padding: var(--spacing-300);
     max-width: 28rem;
     margin-top: 0;
-    box-shadow: 0px 15px 25px 5px rgba(0, 0, 0, 0.6);
+    box-shadow: var(--shadow-card);
   }
 }

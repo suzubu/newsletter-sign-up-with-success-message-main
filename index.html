@@ -17,14 +17,12 @@
   <main>
     <article class="card">
       <picture>
-        <source media="(width >= 1024px)"
+        <source media="(min-width: 64em)"
                 srcset="/assets/images/illustration-sign-up-desktop.svg">
         <source media="(max-height: 31.25em) and (min-width: 26.875em)"
                 srcset="/assets/images/illustration-sign-up-desktop.svg">
-
-        <source media="(width >= 430px)"
+        <source media="(min-width: 26.875em)"
                 srcset="/assets/images/illustration-sign-up-tablet.svg">
-
         <img src="/assets/images/illustration-sign-up-mobile.svg"
              alt=""
              class="hero-image">
@@ -44,7 +42,6 @@
         </div>
 
         <form class="sign-up-form"
-              action=""
               novalidate>
           <div class="form-group">
             <label class="text-3"
@@ -54,20 +51,25 @@
                    id="email"
                    placeholder="email@company.com"
                    required />
-            <span class="error-message">Valid email required</span>
+            <span class="error-message"
+                  role="alert"
+                  id="email-error"
+                  tabindex="-1">Valid email required</span>
 
           </div>
           <button type="submit"
                   class="btn btn-dark text-2-bold">Subscribe to monthly
             newsletter</button>
-
         </form>
       </div>
     </article>
   </main>
 
   <!-- Success message (hidden by default) -->
-  <div class="success-message">
+  <div class="success-message"
+       role="alert"
+       aria-label="Subscription confirmed"
+       tabindex="-1">
     <div class="success-content">
       <img src="/assets/images/icon-success.svg"
            alt=""

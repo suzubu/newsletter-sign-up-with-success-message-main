@@ -1,5 +1,6 @@
 const signUpForm = document.querySelector(".sign-up-form");
 const emailInput = document.querySelector("#email");
+const errorMessage = document.querySelector(".error-message");
 const dismissBtn = document.querySelector(".dismiss-btn");
 const userEmail = document.querySelector(".user-email");
 const successMsg = document.querySelector(".success-message");
@@ -10,16 +11,20 @@ signUpForm.addEventListener("submit", (e) => {
 
   if (!emailInput.validity.valid) {
     emailInput.classList.add("invalid");
+    errorMessage.textContent = "Valid email required";
+    errorMessage.focus();
     return;
   }
 
   userEmail.textContent = emailInput.value;
   main.classList.add("hidden");
   successMsg.classList.add("is-visible");
+  successMsg.focus();
 });
 
 emailInput.addEventListener("input", () => {
   emailInput.classList.remove("invalid");
+  errorMessage.textContent = "";
 });
 
 dismissBtn.addEventListener("click", () => {
@@ -27,4 +32,5 @@ dismissBtn.addEventListener("click", () => {
   emailInput.classList.remove("invalid");
   main.classList.remove("hidden");
   successMsg.classList.remove("is-visible");
+  emailInput.focus();
 });
