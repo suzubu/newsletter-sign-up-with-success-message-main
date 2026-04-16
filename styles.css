@@ -57,7 +57,7 @@ html {
   font-size: 1rem;
   line-height: 1.5;
   letter-spacing: 0;
-  color: var(--blue-800);
+  color: var(--white);
 }
 
 .text-2 {
@@ -191,16 +191,12 @@ input[type="email"].invalid ~ .error-message {
 
 .btn:hover::after {
   opacity: 1;
-  color: var(--white);
 }
 
-input[type="submit"]:hover {
-  background-image: var(--gradient-primary);
-}
-
+/* Tablet */
 @media (min-width: 26.875em) {
   main {
-    background-color: var(--blue-800);
+    background-color: var(--blue-700);
     align-items: center;
   }
 
@@ -229,6 +225,7 @@ input[type="submit"]:hover {
   }
 }
 
+/* Landscape */
 @media (max-height: 31.25em) and (min-width: 26.875em) {
   .card {
     flex-direction: row-reverse;
@@ -274,11 +271,12 @@ input[type="submit"]:hover {
     margin: 0.5rem;
   }
 
-  input[type="submit"] {
+  .btn {
     margin: 1rem 0;
   }
 }
 
+/* Desktop */
 @media (min-width: 64em) {
   .card {
     flex-direction: row-reverse;
@@ -308,13 +306,17 @@ input[type="submit"]:hover {
 
 /* Success Message */
 .success-message {
+  display: none;
   width: 100%;
   min-height: 100vh;
   background-color: var(--white);
-  display: flex;
   flex-direction: column;
   justify-content: space-between;
   padding: 2rem;
+}
+
+.success-message.is-visible {
+  display: flex;
 }
 
 .success-content {
@@ -330,25 +332,13 @@ input[type="submit"]:hover {
 }
 
 .dismiss-btn {
-  background-color: var(--blue-800);
-  color: var(--white);
-  font-family: Roboto-Bold, sans-serif;
-  font-size: 1rem;
-  padding: 1.25rem;
-  border: none;
-  border-radius: 0.5rem;
-  cursor: pointer;
-  width: 100%;
-}
-
-.dismiss-btn:hover {
-  background-image: var(--gradient-primary);
+  margin-top: 1rem;
 }
 
 @media (min-width: 26.875em) {
   .success-message {
     min-height: 100vh;
-    background-color: var(--blue-800);
+    background-color: var(--blue-700);
     justify-content: center;
     align-items: center;
     padding: 0;
@@ -361,9 +351,5 @@ input[type="submit"]:hover {
     max-width: 28rem;
     margin-top: 0;
     box-shadow: 0px 15px 25px 5px rgba(0, 0, 0, 0.6);
-  }
-
-  .dismiss-btn {
-    margin-bottom: 0;
   }
 }

@@ -15,7 +15,7 @@ signUpForm.addEventListener("submit", (e) => {
 
   userEmail.textContent = emailInput.value;
   main.classList.add("hidden");
-  successMsg.classList.remove("hidden");
+  successMsg.classList.add("is-visible");
 });
 
 emailInput.addEventListener("input", () => {
@@ -26,5 +26,5 @@ dismissBtn.addEventListener("click", () => {
   emailInput.value = "";
   emailInput.classList.remove("invalid");
   main.classList.remove("hidden");
-  successMsg.classList.add("hidden");
+  successMsg.classList.remove("is-visible");
 });
