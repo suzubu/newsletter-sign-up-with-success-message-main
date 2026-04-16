@@ -38,7 +38,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [Repo](https://github.com/suzubu/newsletter-sign-up-with-success-message-main)
-- Live Site URL: [Live Site](https://your-live-site-url.com)
+- Live Site URL: [Live Site](https://suzubu.github.io/newsletter-sign-up-with-success-message-main/)
 
 ## My process
 
