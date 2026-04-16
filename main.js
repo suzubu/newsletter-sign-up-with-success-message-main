@@ -23,6 +23,8 @@ emailInput.addEventListener("input", () => {
 });
 
 dismissBtn.addEventListener("click", () => {
+  emailInput.value = "";
+  emailInput.classList.remove("invalid");
   main.classList.remove("hidden");
   successMsg.classList.add("hidden");
 });
