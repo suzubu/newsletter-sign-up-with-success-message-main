@@ -1,11 +1,11 @@
 @font-face {
   font-family: Roboto-Bold;
-  src: url(/assets/fonts/Roboto-Bold.ttf);
+  src: url(assets/fonts/Roboto-Bold.ttf);
 }
 
 @font-face {
   font-family: Roboto;
-  src: url(/assets/fonts/Roboto-Regular.ttf);
+  src: url(assets/fonts/Roboto-Regular.ttf);
 }
 
 :root {
@@ -23,7 +23,7 @@
   --gradient-primary: linear-gradient(to right, #ff6a3a, #ff527b);
 
   /* Shadow */
-  --shadow-card: 0px 15px 25px 5px rgba(0, 0, 0, 0.6);
+  --shadow-card: 0px 15px 25px 5px rgba(24, 24, 24, 0.6);
 
   /* Spacing */
   --spacing-100: 0.5rem;
@@ -37,8 +37,8 @@
   --size-icon: 1.5rem;
 
   /* Border Radius */
-  --radius-sm: 0.5rem;
-  --radius-md: 1rem;
+  --radius-sm: 1rem;
+  --radius-md: 1.5rem;
 }
 
 * {
