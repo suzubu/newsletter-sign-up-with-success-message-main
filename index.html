@@ -15,7 +15,7 @@
 <body>
 
   <main>
-    <article class="card">
+    <section class="card">
       <picture>
         <source media="(min-width: 64em)"
                 srcset="assets/images/illustration-sign-up-desktop.svg">
@@ -62,7 +62,7 @@
             newsletter</button>
         </form>
       </div>
-    </article>
+    </section>
   </main>
 
   <!-- Success message (hidden by default) -->
@@ -74,12 +74,15 @@
       <img src="assets/images/icon-success.svg"
            alt=""
            class="success-icon">
-      <h1 class="text-1">Thanks for subscribing!</h1>
+      <p class="text-1"
+         role="status"
+         aria-live="polite">Thanks for subscribing!</p>
       <p class="text-2">A confirmation email has been sent to <span
               class="user-email"></span>.
         Please open it and click the button inside to confirm your subscription.
       </p>
-      <button class="dismiss-btn btn btn-dark text-2-bold">Dismiss
+      <button type="reset"
+              class="dismiss-btn btn btn-dark text-2-bold">Dismiss
         message</button>
     </div>
   </div>

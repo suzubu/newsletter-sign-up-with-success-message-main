@@ -1,36 +1,41 @@
-const signUpForm = document.querySelector(".sign-up-form");
-const emailInput = document.querySelector("#email");
-const errorMessage = document.querySelector(".error-message");
-const dismissBtn = document.querySelector(".dismiss-btn");
-const userEmail = document.querySelector(".user-email");
-const successMsg = document.querySelector(".success-message");
-const main = document.querySelector("main");
+document.addEventListener("DOMContentLoaded", () => {
+  const signUpForm = document.querySelector(".sign-up-form");
+  if (!signUpForm) return;
 
-signUpForm.addEventListener("submit", (e) => {
-  e.preventDefault();
+  const emailInput = document.querySelector("#email");
+  const errorMessage = document.querySelector(".error-message");
+  const dismissBtn = document.querySelector(".dismiss-btn");
+  const userEmail = document.querySelector(".user-email");
+  const successMsg = document.querySelector(".success-message");
+  const main = document.querySelector("main");
 
-  if (!emailInput.validity.valid) {
-    emailInput.classList.add("invalid");
-    errorMessage.textContent = "Valid email required";
-    errorMessage.focus();
-    return;
-  }
+  signUpForm.addEventListener("submit", (e) => {
+    e.preventDefault();
 
-  userEmail.textContent = emailInput.value;
-  main.classList.add("hidden");
-  successMsg.classList.add("is-visible");
-  successMsg.focus();
-});
+    if (!emailInput.validity.valid) {
+      emailInput.classList.add("invalid");
+      errorMessage.textContent = "Valid email required";
+      errorMessage.focus();
+      return;
+    }
 
-emailInput.addEventListener("input", () => {
-  emailInput.classList.remove("invalid");
-  errorMessage.textContent = "";
-});
+    userEmail.textContent = emailInput.value;
+    main.classList.add("hidden");
+    successMsg.classList.add("is-visible");
+    successMsg.focus();
+  });
 
-dismissBtn.addEventListener("click", () => {
-  emailInput.value = "";
-  emailInput.classList.remove("invalid");
-  main.classList.remove("hidden");
-  successMsg.classList.remove("is-visible");
-  emailInput.focus();
+  emailInput.addEventListener("input", () => {
+    emailInput.classList.remove("invalid");
+    errorMessage.textContent = "";
+  });
+
+  dismissBtn.addEventListener("click", () => {
+    emailInput.value = "";
+    emailInput.classList.remove("invalid");
+    errorMessage.textContent = "";
+    main.classList.remove("hidden");
+    successMsg.classList.remove("is-visible");
+    emailInput.focus();
+  });
 });
