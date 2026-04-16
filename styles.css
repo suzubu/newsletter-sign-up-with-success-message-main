@@ -49,8 +49,7 @@
 
 /* Focus styles */
 :focus-visible {
-  outline: 3px solid var(--red);
-  outline-offset: 3px;
+  outline: 1px solid var(--blue-700);
 }
 
 html {
