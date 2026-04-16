@@ -23,7 +23,7 @@
   --gradient-primary: linear-gradient(to right, #ff6a3a, #ff527b);
 
   /* Shadow */
-  --shadow-card: 0px 15px 25px 5px rgba(40, 40, 40, 0.6);
+  --shadow-card: 0px 15px 25px 5px rgba(38, 36, 36, 0.6);
 
   /* Spacing */
   --spacing-100: 0.5rem;
