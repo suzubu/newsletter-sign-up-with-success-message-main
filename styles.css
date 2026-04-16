@@ -27,6 +27,8 @@
   --spacing-800: 4rem;
   --spacing-900: 4.5rem;
   --spacing-1300: 6.5rem;
+
+  overscroll-behavior: none;
 }
 
 * {
@@ -183,9 +185,6 @@ input[type="submit"] {
 }
 
 @media (max-height: 31.25em) and (min-width: 26.875em) {
-  main {
-    height: 100svh;
-  }
   .card {
     flex-direction: row-reverse;
     align-items: center;
@@ -193,15 +192,18 @@ input[type="submit"] {
     gap: 1.5rem;
     max-width: 55rem;
     overflow: hidden;
+    max-height: 100vh;
   }
 
   picture {
     flex: 1;
     flex-shrink: 0;
+    align-self: stretch;
   }
 
   .hero-image {
     width: 100%;
+    height: 100%;
     padding: 0;
     border-radius: 1rem;
     object-fit: cover;
@@ -210,6 +212,24 @@ input[type="submit"] {
   .card-body {
     flex: 1;
     padding: 1rem;
+  }
+
+  .content {
+    margin: 0;
+    padding: 0;
+    padding-top: 1rem;
+  }
+
+  p {
+    margin: 0.5rem 0;
+  }
+
+  ul li {
+    margin: 0.5rem;
+  }
+
+  input[type="submit"] {
+    margin: 1rem 0;
   }
 }
 
